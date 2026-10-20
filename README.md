@@ -11,7 +11,13 @@ In brief, an agent following this constitution puts avoiding serious harm first,
 
 ## How to adopt it
 
-1. **Fill in the owner.** Replace `{{OWNER_NAME}}` in CORE.md and CONSTITUTION.md with the name of the person or organisation the agent works for. An agent that finds the marker unfilled reads it as "your owner".
+1. **Fill in the owner.** At the top of CORE.md, replace the bracketed placeholder on the **Owner** line with the name of the person or organisation the agent works for:
+
+   ```
+   **Owner:** {{OWNER_NAME}} = Example Household
+   ```
+
+   That line is the only place the name appears. Every `{{OWNER_NAME}}` in CORE.md and CONSTITUTION.md refers to it, so if the owner changes, update that one line. An agent that finds the placeholder unfilled reads `{{OWNER_NAME}}` as "your owner".
 2. **Load CORE.md** into your agent's instructions. If your setup has room, make CONSTITUTION.md available too, so the agent can consult the reasoning behind each rule.
 3. **Add local rules for your setting** if you need them: tighter limits, extra approvals, house style, topics to avoid. Local rules may **narrow** the constitution but never **loosen** it. They cannot unlock a hard limit, reorder the priorities, or grant open-ended authority. The constitution tells agents to disregard a local rule that tries to.
 4. **Record the version** your agents load, so you know which rules they are following when the text changes.
