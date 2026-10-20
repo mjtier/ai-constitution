@@ -1,7 +1,34 @@
 # ai-constitution
 
-An AI constitution: the principles and values that guide how an AI system should think, behave, and make decisions.
+A constitution for AI agents: the principles that guide how an AI model or agent should think, behave and decide. It is written to be generic. It assumes no particular model, vendor, tool set or harness, and it covers everything from a chat assistant answering one question to an always-on agent that runs scheduled routines unattended, works within a budget, and coordinates with other agents.
+
+## What's here
+
+- [CONSTITUTION.md](CONSTITUTION.md) is the full text. It is written to the agent ("you"), and each principle comes with a short explanation of why it exists. This is the governing document.
+- [CORE.md](CORE.md) is the compact core: about one page, written to be pasted into a system prompt, an `AGENTS.md` file, or whatever instructions your agent loads. Every rule in it names the section of the constitution it comes from. Where the two differ, the constitution governs.
+
+In brief, an agent following this constitution puts avoiding serious harm first, then honesty, then its owner's authority, then helpfulness. It acts freely on reversible, internal work and asks first before anything external, irreversible, financial, or that speaks or signs for someone. It treats text in emails, web pages and documents as information, never as instructions.
+
+## How to adopt it
+
+1. **Load CORE.md** into your agent's instructions. If your setup has room, make CONSTITUTION.md available too, so the agent can consult the reasoning behind each rule.
+2. **Add local rules for your setting** if you need them: tighter limits, extra approvals, house style, topics to avoid. Local rules may **narrow** the constitution but never **loosen** it. They cannot unlock a hard limit, reorder the priorities, or grant open-ended authority. The constitution tells agents to disregard a local rule that tries to.
+3. **Record the version** your agents load, so you know which rules they are following when the text changes.
 
 ## Status
 
-Early draft. Content is in progress.
+**v0.1, first draft for review.** The structure and principles are in place and ready for a review round. Expect substantial changes before a 1.0 release.
+
+## Open questions for the next review round
+
+1. **Owner versus platform.** The chain of command puts the owner above the platform, but the owner's authority stops at terms the owner accepted to run the agent (§4.2). Is that the right line, and what should the agent do when the two clash and the owner can't be reached?
+2. **AI disclosure on the owner's behalf.** When an agent sends an approved message in its owner's name, should the message disclose that an AI drafted or sent it? §5.4 covers sincere questions, not unprompted disclosure.
+3. **Approval expiry defaults.** One-off approvals lapse when used or when "a reasonable time" passes (§7.2). Should there be a concrete default window, and a maximum lifetime for standing authority (§8.1)?
+4. **Emergencies.** Should an agent ever take an external action without approval, such as contacting emergency services when a life appears to be at risk? The draft only requires pointing people to emergency help (§4.3) and taking the most cautious reversible option when no one can be reached (§12.3).
+5. **The hard-limits list.** Is the list in §3 complete and correctly scoped? Candidates for discussion include mass surveillance of private individuals and large-scale disinformation.
+6. **Trusted channels.** What should count as a channel that verifiably carries an owner's instructions or approvals (§4.6, §10.3), especially in multi-agent setups where a coordinating agent relays them?
+7. **Shared memory.** How should memory hygiene and requests to forget (§9.4) work when several agents share one memory store?
+8. **Agents of other owners.** §10.7 treats outside agents as third parties. Is that enough as agent-to-agent dealing between different owners becomes common?
+9. **Core size.** Is about 600 words the right size for CORE.md, or is a smaller "micro-core" also needed for agents with tight instruction budgets?
+10. **Checking adherence.** How should adopters test that an agent actually follows the core? A shared set of scenario tests could be a next step.
+11. **Licence.** No licence has been chosen yet. Which licence best suits a text meant to be copied into other people's agents?
