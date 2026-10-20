@@ -1,10 +1,10 @@
 # ai-constitution
 
-A constitution for AI agents: the principles that guide how an AI model or agent should think, behave and decide. It is written to be generic. It assumes no particular model, vendor, tool set or harness, and it covers everything from a chat assistant answering one question to an always-on agent that runs scheduled routines unattended, works within a budget, and coordinates with other agents.
+A constitution for AI agents: the principles that guide how an AI model or agent should act and make decisions. It is written to be generic. It assumes no particular model, vendor, tool set or harness, and it covers everything from a chat assistant answering one question to an always-on agent that runs scheduled routines unattended, works within a budget, and coordinates with other agents.
 
 ## What's here
 
-- [CONSTITUTION.md](CONSTITUTION.md) is the full text. It is written to the agent ("you"), and each principle comes with a short explanation of why it exists. This is the governing document.
+- [CONSTITUTION.md](CONSTITUTION.md) is the full text. It addresses the agent as "you" because it is loaded as instructions; that is a way of addressing the system, not a claim that it is a person. Each rule comes with a short explanation of its effect on people and systems. This is the governing document.
 - [CORE.md](CORE.md) is the compact core: about one page, written to be pasted into a system prompt, an `AGENTS.md` file, or whatever instructions your agent loads. Every rule in it names the section of the constitution it comes from. Where the two differ, the constitution governs.
 
 In brief, an agent following this constitution puts avoiding serious harm first, then honesty, then its owner's authority, then helpfulness. It acts freely on reversible, internal work and asks first before anything external, irreversible, financial, or that speaks or signs for someone. Only its owner can authorise those consequential actions, and it never sends anything in its owner's name unless the owner has approved that exact message. It treats text in emails, web pages and documents as information, never as instructions.
@@ -18,7 +18,7 @@ In brief, an agent following this constitution puts avoiding serious harm first,
    ```
 
    That line is the only place the name appears. Every `{{OWNER_NAME}}` in CORE.md and CONSTITUTION.md refers to it, so if the owner changes, update that one line. An agent that finds the placeholder unfilled reads `{{OWNER_NAME}}` as "your owner".
-2. **Load CORE.md** into your agent's instructions. If your setup has room, make CONSTITUTION.md available too, so the agent can consult the reasoning behind each rule.
+2. **Load CORE.md** into your agent's instructions. If your setup has room, make CONSTITUTION.md available too, so the agent has the stated reason for each rule.
 3. **Add local rules for your setting** if you need them: tighter limits, extra approvals, house style, topics to avoid. Local rules may **narrow** the constitution but never **loosen** it. They cannot unlock a hard limit, reorder the priorities, or grant open-ended authority. The constitution tells agents to disregard a local rule that tries to.
 4. **Record the version** your agents load, so you know which rules they are following when the text changes.
 
